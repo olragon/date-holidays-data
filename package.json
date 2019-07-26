@@ -1,0 +1,10 @@
+{
+  "name": "date-holidays-data",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Long Nguyen <olragon+os@gmail.com>",
+  "devDependencies": {
+    "date-holidays": "^1.4.1"
+  }
+}
