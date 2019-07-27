@@ -1,6 +1,6 @@
 {
   "name": "date-holidays-data",
-  "version": "1.0.0",
+  "version": "1.4.1",
   "main": "index.js",
   "license": "MIT",
   "author": "Long Nguyen <olragon+os@gmail.com>",

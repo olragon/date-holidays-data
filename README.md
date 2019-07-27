@@ -2,7 +2,24 @@
 
 > `date-holidays`'s data extracted to bite-sized JSON files
 
-## Usages
+Version should be synchronized with [date-holidays](https://github.com/commenthol/date-holidays) 
+
+## Install
+
+With npm
+```
+npm install date-holidays-data --save
+```
+
+With yarn
+
+```
+yarn add date-holidays-data --save
+```
+
+## Usage
+
+Data only
 
 ```
 // Holidays of United States of America
@@ -26,9 +43,14 @@ const hd = new Holidays(data);
 // ...
 ```
 
-## Updates
+## Update
 
 ```
 yarn upgrade
 node scripts/generate.js
 ```
+
+## License
+
+- Data: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
+- Source Code: [MIT](https://opensource.org/licenses/MIT)
