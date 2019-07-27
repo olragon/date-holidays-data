@@ -14,7 +14,7 @@ npm install date-holidays-data --save
 With yarn
 
 ```
-yarn add date-holidays-data --save
+yarn add date-holidays-data
 ```
 
 ## Usage
