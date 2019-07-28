@@ -19,9 +19,9 @@ yarn add date-holidays-data
 
 ## Usage
 
-Data only
+### Data only
 
-```
+```js
 // Holidays of United States of America
 const dataUs = require('date-holidays-data/data/US.json');
 
@@ -32,14 +32,39 @@ const dataAsIncludesUs = require('date-holidays-data/data/AS.json');
 const dataUsAsGu = require('date-holidays-data/data/US-AS-GM.json');
 ```
 
-Use with [date-holidays-parser](https://github.com/commenthol/date-holidays-parser)
-```
+### Use with [date-holidays-parser](https://github.com/commenthol/date-holidays-parser)
+
+```js
 // Holidays of United States of America
 const dataUs = require('date-holidays-data/data/US.json');
 
 const Holidays = require('date-holidays-parser');
-const hd = new Holidays(data);
+const hd = new Holidays(dataUs);
 
+// get supported countries
+hd.getCountries()
+
+// get supported states e.g. for US
+hd.getStates('US')
+
+// ...
+```
+
+### Selective multiple countries
+
+#### Install lodash.merge
+```
+yarn add lodash.merge
+```
+
+#### Use `lodash.merge` to combine data
+```js
+const Holidays = require('date-holidays-parser');
+const dataUs = require('date-holidays-data/data/US.json');
+const dataVn = require('date-holidays-data/data/VN.json');
+const merge = require('lodash.merge');
+const dataUsVn = merge(dataUs, dataVn);
+const hd = new Holidays(dataUsVn);
 // ...
 ```
 
