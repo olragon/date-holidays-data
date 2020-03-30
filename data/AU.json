@@ -1,5 +1,5 @@
 {
-  "version": "2019-07-26",
+  "version": "2020-03-30",
   "license": "CC-BY-SA-3",
   "holidays": {
     "AU": {
@@ -27,10 +27,9 @@
       ],
       "days": {
         "01-01 and if saturday,sunday then next monday": {
-          "substitute": true,
           "_name": "01-01"
         },
-        "01-26 and if saturday,sunday then next monday": {
+        "01-26 if saturday,sunday then next monday": {
           "substitute": true,
           "name": {
             "en": "Australia Day"
@@ -43,16 +42,14 @@
           "_name": "easter -1"
         },
         "easter": {
-          "_name": "easter",
-          "type": "observance"
+          "_name": "easter"
         },
         "easter 1": {
           "_name": "easter 1"
         },
-        "04-25 and if saturday,sunday then next monday": {
-          "substitute": true,
+        "04-25": {
           "name": {
-            "en": "ANZAC Day"
+            "en": "Anzac Day"
           }
         },
         "2nd monday in June": {
@@ -60,25 +57,18 @@
             "en": "Queen's Birthday"
           }
         },
-        "12-24": {
-          "_name": "12-24",
-          "type": "observance"
+        "1st monday in October": {
+          "name": {
+            "en": "Labour Day"
+          }
         },
-        "12-25 and if saturday then next monday": {
+        "12-25 and if saturday then next monday if sunday then next tuesday": {
           "substitute": true,
           "_name": "12-25"
         },
-        "substitutes 12-25 if sunday then next tuesday": {
-          "substitute": true,
-          "_name": "12-25"
-        },
-        "12-26 and if saturday,sunday then next monday": {
+        "12-26 and if saturday then next monday if sunday then next tuesday": {
           "substitute": true,
           "_name": "12-26"
-        },
-        "12-31": {
-          "_name": "12-31",
-          "type": "observance"
         }
       },
       "states": {
@@ -93,17 +83,23 @@
                 "en": "Canberra Day"
               }
             },
-            "easter": {
+            "04-25": false,
+            "04-25 if sunday then next monday": {
+              "substitute": true,
+              "name": {
+                "en": "Anzac Day"
+              }
+            },
+            "2020-04-27": {
+              "name": {
+                "en": "Declared public holiday"
+              },
               "type": "public"
             },
-            "monday before 10-01": {
+            "monday after 05-27": {
               "name": {
-                "en": "Family & Community Day"
-              },
-              "note": "rule missing: When Family and Community Day falls on Labour Day holiday, it changes to the 2nd Monday of 3rd term school holidays"
-            },
-            "1st monday in October": {
-              "name": "Labour Day"
+                "en": "Reconciliation Day"
+              }
             }
           }
         },
@@ -113,19 +109,11 @@
             "Australia/Sydney"
           ],
           "days": {
-            "easter": {
-              "type": "public"
-            },
             "1st monday in August": {
               "name": {
                 "en": "Bank Holiday"
               },
               "type": "bank"
-            },
-            "1st monday in October": {
-              "name": {
-                "en": "Labour Day"
-              }
             }
           }
         },
@@ -135,6 +123,14 @@
             "Australia/Darwin"
           ],
           "days": {
+            "easter": false,
+            "04-25": false,
+            "04-25 if sunday then next monday": {
+              "substitute": true,
+              "name": {
+                "en": "Anzac Day"
+              }
+            },
             "1st monday in May": {
               "name": {
                 "en": "May Day"
@@ -144,6 +140,23 @@
               "name": {
                 "en": "Picnic Day"
               }
+            },
+            "1st monday in October": false,
+            "12-24 19:00": {
+              "_name": "12-24"
+            },
+            "12-25 and if saturday then next monday if sunday then next tuesday": false,
+            "12-25 if saturday then next monday if sunday then next tuesday": {
+              "substitute": true,
+              "_name": "12-25"
+            },
+            "12-26 and if saturday then next monday if sunday then next tuesday": false,
+            "12-26 if saturday then next monday if sunday then next tuesday": {
+              "substitute": true,
+              "_name": "12-26"
+            },
+            "12-31 19:00": {
+              "_name": "12-31"
             }
           }
         },
@@ -154,43 +167,26 @@
             "Australia/Lindeman"
           ],
           "days": {
-            "1st monday in October #1": {
+            "04-25": false,
+            "04-25 if sunday then next monday": {
+              "substitute": true,
               "name": {
-                "en": "Labour Day"
-              },
-              "active": [
-                {
-                  "from": "2013-01-01",
-                  "to": "2016-01-01"
-                }
-              ]
+                "en": "Anzac Day"
+              }
             },
             "1st monday in May": {
               "name": {
                 "en": "Labour Day"
-              },
-              "active": [
-                {
-                  "from": "2016-01-01"
-                }
-              ]
+              }
             },
-            "2nd monday in June": {
-              "active": [
-                {
-                  "to": "2016-01-01"
-                }
-              ]
-            },
-            "1st monday in October #2": {
+            "2nd monday in June": false,
+            "1st monday in October": {
               "name": {
                 "en": "Queen's Birthday"
-              },
-              "active": [
-                {
-                  "from": "2016-01-01"
-                }
-              ]
+              }
+            },
+            "12-24 18:00": {
+              "_name": "12-24"
             }
           }
         },
@@ -200,18 +196,27 @@
             "Australia/Adelaide"
           ],
           "days": {
+            "easter": false,
             "2nd monday in March": {
               "name": {
-                "en": "March public holiday"
+                "en": "Adelaide Cup Day"
               }
             },
             "12-24 19:00": {
-              "_name": "12-24",
-              "type": "public"
+              "_name": "12-24"
+            },
+            "12-25 and if saturday then next monday if sunday then next tuesday": false,
+            "12-25 if saturday then next monday if sunday then next tuesday": {
+              "substitute": true,
+              "_name": "12-25"
+            },
+            "12-26 and if saturday then next monday if sunday then next tuesday": false,
+            "12-26 if saturday then next monday if sunday then next tuesday": {
+              "substitute": true,
+              "name": "Proclamation Day"
             },
             "12-31 19:00": {
-              "_name": "12-24",
-              "type": "public"
+              "_name": "12-31"
             }
           }
         },
@@ -221,42 +226,28 @@
             "Australia/Hobart"
           ],
           "days": {
+            "01-01 and if saturday,sunday then next monday": false,
+            "01-01 if saturday then next monday if sunday then next tuesday": {
+              "substitute": true,
+              "_name": "01-01"
+            },
             "2nd monday in March": {
               "name": {
                 "en": "Eight Hours Day"
               }
             },
-            "easter -1": {
-              "type": "observance"
-            },
-            "easter 2": {
-              "name": {
-                "en": "Easter Tuesday"
-              },
+            "easter -1": false,
+            "easter": false,
+            "easter +2": {
+              "name": "Easter Tuesday",
               "type": "optional",
               "note": "Public Service employees or contract dependent"
-            }
-          },
-          "regions": {
-            "H": {
-              "name": "Hobart",
-              "days": {
-                "2nd monday in February": {
-                  "name": {
-                    "en": "Royal Hobart Regatta"
-                  }
-                }
-              }
             },
-            "NH": {
-              "name": "Non-Hobart",
-              "days": {
-                "1st monday in November": {
-                  "name": {
-                    "en": "Recreation Day"
-                  }
-                }
-              }
+            "1st monday in October": false,
+            "12-26 and if saturday then next monday if sunday then next tuesday": false,
+            "12-26 if saturday then next monday if sunday then next tuesday": {
+              "substitute": true,
+              "_name": "12-26"
             }
           }
         },
@@ -271,25 +262,21 @@
                 "en": "Labour Day"
               }
             },
-            "easter": {
-              "type": "public"
-            },
-            "1st friday before 10-04": {
+            "2nd monday in June": {
               "name": {
-                "en": "Grand Final Friday"
+                "en": "Queen's Birthday"
+              }
+            },
+            "1st monday in October": false,
+            "1st friday before October": {
+              "name": {
+                "en": "AFL Grand Final Friday"
               },
               "note": "Date might differ as dependent on AFL schedule"
-            }
-          },
-          "regions": {
-            "M": {
-              "name": "Melbourne",
-              "days": {
-                "1st tuesday in November": {
-                  "name": {
-                    "en": "Melbourne Cup"
-                  }
-                }
+            },
+            "1st tuesday in November": {
+              "name": {
+                "en": "Melbourne Cup"
               }
             }
           }
@@ -306,8 +293,14 @@
                 "en": "Labour Day"
               }
             },
-            "easter -1": {
-              "type": "observance"
+            "easter -1": false,
+            "easter": false,
+            "04-25": false,
+            "04-25 and if saturday,sunday then next monday": {
+              "substitute": true,
+              "name": {
+                "en": "Anzac Day"
+              }
             },
             "1st monday in June": {
               "name": {
@@ -315,12 +308,13 @@
               }
             },
             "2nd monday in June": false,
-            "monday before 10-01": {
+            "monday before October": {
               "name": {
                 "en": "Queen's Birthday"
               },
               "note": "Might be on a different day; is proclaimed by Governor"
-            }
+            },
+            "1st monday in October": false
           }
         }
       }
@@ -374,7 +368,7 @@
         "sw": "Mwaka mpya",
         "tr": "Yılbaşı",
         "uk": "Новий Рік",
-        "vi": "Tết dương lịch",
+        "vi": "Tết Dương lịch",
         "zh": "元旦"
       }
     },
@@ -397,13 +391,15 @@
         "mk": "Богојавление",
         "pl": "Święto Trzech Króli",
         "sk": "Zjavenie Pána",
-        "sv": "Trettondedag jul"
+        "sv": "Trettondedag jul",
+        "vi": "Lễ Hiển Linh"
       }
     },
     "02-02": {
       "name": {
         "en": "Candlemas",
-        "de": "Lichtmess"
+        "de": "Lichtmess",
+        "vi": "Lễ Đức Mẹ dâng Chúa Giêsu trong đền thánh"
       }
     },
     "02-14": {
@@ -411,7 +407,8 @@
         "en": "Valentine's Day",
         "de": "Valentinstag",
         "fr": "Saint-Valentin",
-        "nl": "Valentijnsdag"
+        "nl": "Valentijnsdag",
+        "vi": "Lễ tình nhân"
       }
     },
     "03-08": {
@@ -439,13 +436,15 @@
         "de": "Josefstag",
         "es": "San José",
         "it": "San Giuseppe",
-        "mt": "San Ġużepp"
+        "mt": "San Ġużepp",
+        "vi": "Kính Thánh Giuse"
       }
     },
     "04-01": {
       "name": {
         "en": "April Fools' Day",
-        "sq": "Dita e Gënjeshtrave"
+        "sq": "Dita e Gënjeshtrave",
+        "vi": "Cá tháng tư"
       }
     },
     "05-01": {
@@ -457,6 +456,7 @@
         "bg": "Ден на труда",
         "bs": "Radni dan",
         "cz": "Svátek práce",
+        "da": "1. maj",
         "de": "Tag der Arbeit",
         "el": "Εργατική Πρωτομαγιά",
         "es": "Fiesta del trabajo",
@@ -486,7 +486,7 @@
         "sr": "Празник рада",
         "sv": "Första Maj",
         "uk": "День міжнародної солідарності трудящих",
-        "vi": "Ngày Quốc tế Lao động",
+        "vi": "Quốc tế Lao động",
         "zh": "劳动节"
       }
     },
@@ -497,7 +497,8 @@
         "es": "San Pedro y San Pablo",
         "fr": "Saint Pierre et Paul",
         "it": "Santi Pietro e Paolo",
-        "mt": "L-Imnarja"
+        "mt": "L-Imnarja",
+        "vi": "Lễ kính Thánh Phêrô"
       }
     },
     "08-15": {
@@ -518,7 +519,8 @@
         "pt": "Assunção de Maria",
         "ro": "Adormirea Maicii Domnului",
         "sl": "Marijino vnebovzetje",
-        "sq": "Shën Mëria e Gushtit"
+        "sq": "Shën Mëria e Gushtit",
+        "vi": "Đức Mẹ Lên Trời"
       }
     },
     "11-01": {
@@ -542,7 +544,8 @@
         "sk": "Sviatok všetkých svätých",
         "sq": "Të gjitha Saints",
         "sr": "Сви Свети",
-        "sv": "Alla helgons dag"
+        "sv": "Alla helgons dag",
+        "vi": "Lễ Các Thánh"
       }
     },
     "11-02": {
@@ -555,14 +558,16 @@
         "fr": "Fête des morts",
         "hr": "Dušni dan",
         "nl": "Allerzielen",
-        "pt": "Dia de Finados"
+        "pt": "Dia de Finados",
+        "vi": "Lễ Các Đẳng"
       }
     },
     "11-11": {
       "name": {
         "en": "Saint Martin",
         "de": "Sankt Martin (Faschingsbeginn)",
-        "nl": "Sint Maarten"
+        "nl": "Sint Maarten",
+        "vi": "Lễ thánh Martin"
       }
     },
     "12-06": {
@@ -570,7 +575,8 @@
         "en": "Saint Nicholas",
         "de": "Sankt Nikolaus",
         "fr": "Saint-Nicolas",
-        "nl": "Sinterklaas"
+        "nl": "Sinterklaas",
+        "vi": "Thánh Saint Nicholas"
       }
     },
     "12-08": {
@@ -609,7 +615,8 @@
         "sk": "Štedrý deň",
         "sq": "Nata e Krishtlindjes",
         "sr": "Бадњи дан",
-        "sv": "Julafton"
+        "sv": "Julafton",
+        "vi": "Đêm Giáng Sinh"
       }
     },
     "12-25": {
@@ -622,7 +629,7 @@
         "de-at": "Christtag",
         "ca": "Nadal",
         "cz": "1. svátek vánoční",
-        "da": "1. Juledag",
+        "da": "Juledag",
         "de": "Weihnachten",
         "de-ch": "Weihnachtstag",
         "el": "Χριστούγεννα",
@@ -658,7 +665,8 @@
         "sq": "Krishtlindja",
         "sr": "Католички Божић",
         "sv": "Juldagen",
-        "sw": "Krismasi"
+        "sw": "Krismasi",
+        "vi": "Lễ Giáng Sinh"
       }
     },
     "12-26": {
@@ -666,7 +674,7 @@
         "en": "Boxing Day",
         "bg": "2-ри ден на Коледа",
         "cz": "2. svátek vánoční",
-        "da": "2. Juledag",
+        "da": "Anden Juledag",
         "de": "2. Weihnachtstag",
         "de-at": "Stefanitag",
         "de-ch": "Stephanstag",
@@ -689,7 +697,8 @@
         "pl": "Drugi dzień Bożego Narodzenia",
         "ro": "Două zi de Crăciun",
         "sk": "Druhý sviatok vianočný",
-        "sv": "Annandag jul"
+        "sv": "Annandag jul",
+        "vi": "Ngày tặng quà"
       }
     },
     "12-31": {
@@ -711,7 +720,8 @@
         "nl": "Oudejaarsavond",
         "no": "Nyttårsaften",
         "pt": "Véspera de Ano Novo",
-        "sv": "Nyårsafton"
+        "sv": "Nyårsafton",
+        "vi": "Đêm giao thừa"
       }
     },
     "easter -48": {
@@ -721,7 +731,8 @@
         "es": "Carnaval",
         "fr": "Lundi de Carnaval",
         "nl": "Carnavalmaandag",
-        "pap": "Dialuna di Carnaval"
+        "pap": "Dialuna di Carnaval",
+        "vi": "Ngày thứ hai hoa hồng"
       }
     },
     "easter -47": {
@@ -730,7 +741,8 @@
         "es": "Carnaval",
         "de": "Faschingsdienstag",
         "hr": "Pokladni utorak",
-        "pt": "Carnaval"
+        "pt": "Carnaval",
+        "vi": "Thứ ba mập béo"
       }
     },
     "easter -46": {
@@ -742,7 +754,8 @@
         "it": "Ceneri",
         "is": "Öskudagur",
         "pt": "Quarta-feira de Cinzas",
-        "sw": "Jumatano ya Majivu"
+        "sw": "Jumatano ya Majivu",
+        "vi": "Thứ tư Lễ Tro"
       }
     },
     "easter -7": {
@@ -752,7 +765,8 @@
         "es": "Domingo de Ramos",
         "it": "Domenica delle Palme",
         "is": "Pálmasunnudagur",
-        "no": "Palmesøndag"
+        "no": "Palmesøndag",
+        "vi": "Chúa nhật Lễ Lá"
       }
     },
     "easter -3": {
@@ -769,7 +783,8 @@
         "is": "Skírdagur",
         "kl": "sisamanngortoq illernartoq",
         "nl": "Witte donderdag",
-        "no": "Skjærtorsdag"
+        "no": "Skjærtorsdag",
+        "vi": "Thứ năm Tuần Thánh"
       }
     },
     "easter -2": {
@@ -803,7 +818,8 @@
         "sq": "E Premtja e Madhe",
         "sr": "Католички Велики петак",
         "sv": "Långfredagen",
-        "sw": "Ijumaa Kuu"
+        "sw": "Ijumaa Kuu",
+        "vi": "Thứ sáu Tuần Thánh"
       }
     },
     "easter -1": {
@@ -815,7 +831,8 @@
         "fil": "Sabado de Gloria",
         "fr": "Samedi saint",
         "it": "Sabado santo",
-        "no": "Påskeaften"
+        "no": "Påskeaften",
+        "vi": "Thứ bảy Tuần Thánh"
       }
     },
     "easter": {
@@ -852,7 +869,8 @@
         "sq": "Pashkët Katolike",
         "sr": "Католички Васкрс",
         "sv": "Påsk",
-        "sw": "Pasaka"
+        "sw": "Pasaka",
+        "vi": "Lễ Phục Sinh"
       }
     },
     "easter 1": {
@@ -885,7 +903,8 @@
         "sl": "Velikonočni ponedeljek",
         "sr": "Католички Васкрсни понедељак",
         "sv": "Annandag påsk",
-        "sw": "Jumatatu ya Pasaka"
+        "sw": "Jumatatu ya Pasaka",
+        "vi": "Thứ hai phục sinh"
       }
     },
     "easter 39": {
@@ -905,7 +924,8 @@
         "no": "Kristi himmelfartsdag",
         "pap": "Dia di Asuncion",
         "ro": "Ziua Eroilor",
-        "sv": "Kristi himmelfärds dag"
+        "sv": "Kristi himmelfärds dag",
+        "vi": "Lễ Thăng Thiên"
       }
     },
     "easter 49": {
@@ -930,13 +950,14 @@
         "ro": "Rusaliile",
         "sl": "binkošti",
         "sv": "Pingst",
-        "uk": "Трійця"
+        "uk": "Трійця",
+        "vi": "Lễ Chúa Thánh Thần Hiện Xuống"
       }
     },
     "easter 50": {
       "name": {
         "en": "Whit Monday",
-        "da": "2. Pinsedag",
+        "da": "Anden Pinsedag",
         "de": "Pfingstmontag",
         "es": "Lunes de Pentecostés",
         "fo": "Annar hvítusunnudagur",
@@ -960,7 +981,8 @@
         "it": "Corpus Domini",
         "hr": "Tijelovo",
         "pl": "Dzień Bożego Ciała",
-        "pt": "Corpo de Deus"
+        "pt": "Corpo de Deus",
+        "vi": "Lễ Mình và Máu Thánh Chúa Kitô"
       }
     },
     "julian 01-01": {
@@ -1174,7 +1196,8 @@
       "name": {
         "en": "Abolition of Slavery",
         "fr": "Abolition de l’esclavage",
-        "nl": "Afschaffing van de slavernij"
+        "nl": "Afschaffing van de slavernij",
+        "vi": "Bãi bỏ chế độ Nô lệ"
       }
     },
     "Buß- und Bettag": {
@@ -1200,7 +1223,8 @@
         "ro": "Ziua Constituției",
         "sk": "Deň Ústavy",
         "sq": "Dita e Kushtetutës",
-        "uk": "День Конституції"
+        "uk": "День Конституції",
+        "vi": "Ngày pháp luật"
       }
     },
     "Fathers Day": {
@@ -1210,7 +1234,8 @@
         "lt": "Tėvo diena",
         "nl": "Vaderdag",
         "pt": "Dia dos Pais",
-        "no": "Farsdag"
+        "no": "Farsdag",
+        "vi": "Ngày của cha"
       }
     },
     "Independence Day": {
@@ -1238,14 +1263,16 @@
         "sr": "Дан независности",
         "sv": "Självständighetsdagen",
         "sw": "Siku ya uhuru",
-        "uk": "День Незалежності"
+        "uk": "День Незалежності",
+        "vi": "Ngày Độc lập"
       }
     },
     "Liberation Day": {
       "name": {
         "en": "Liberation Day",
         "no": "Frigjøringsdagen",
-        "sq": "Dita e Çlirimit"
+        "sq": "Dita e Çlirimit",
+        "vi": "Ngày Thống nhất"
       }
     },
     "Mothers Day": {
@@ -1272,7 +1299,8 @@
         "pl": "Dzień Matki",
         "ro": "Ziua Mamei",
         "sq": "Dita e Nënës",
-        "sv": "Mors dag"
+        "sv": "Mors dag",
+        "vi": "Ngày của mẹ"
       }
     },
     "National Holiday": {
@@ -1282,28 +1310,32 @@
         "es": "Fiesta Nacional",
         "fr": "Fête nationale",
         "el": "εθνική επέτειος",
-        "nl": "Nationale feestdag"
+        "nl": "Nationale feestdag",
+        "vi": "Quốc Lễ"
       }
     },
     "Public Holiday": {
       "name": {
         "en": "Public Holiday",
         "fr": "Jour férié légaux",
-        "pt": "Feriado Obrigatório"
+        "pt": "Feriado Obrigatório",
+        "vi": "Nghỉ lễ Toàn Quốc"
       }
     },
     "Reformation Day": {
       "name": {
         "en": "Reformation Day",
         "de": "Reformationstag",
-        "es": "Día Nacional de las Iglesias Evangélicas y Protestantes"
+        "es": "Día Nacional de las Iglesias Evangélicas y Protestantes",
+        "vi": "Kháng Cách"
       }
     },
     "Revolution Day": {
       "name": {
         "en": "Revolution Day",
         "es": "Día de la Revolución",
-        "nl": "Dag van de revolutie"
+        "nl": "Dag van de revolutie",
+        "vi": "Tổng khởi nghĩa"
       }
     },
     "substitutes": {
@@ -1321,7 +1353,8 @@
         "nl": "substituut",
         "sq": "ditë zëvendësuese",
         "sr": "замена дан",
-        "uk": "замінити день"
+        "uk": "замінити день",
+        "vi": "ngày thay thế"
       }
     }
   }
